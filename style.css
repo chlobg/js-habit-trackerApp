@@ -1,0 +1,292 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --card-bg: #fff;
+  --accent: #000;
+  --checked: #4caf50;
+  --btn-bg: #000;
+  --btn-text: #fff;
+  --input-bg: #fff;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+  --border-radius: 8px;
+
+  --color-border: #ddd;
+  --color-primary: #4a90e2;
+  --color-secondary: #fff;
+  --color-light-gray: #f6f7f9;
+  --color-medium-gray: #999;
+  --color-text: var(--text-color);
+}
+
+body.dark {
+  --bg-color: #0f1117;
+  --text-color: #f0f0f0;
+  --card-bg: #1c1e26;
+  --accent: #fff;
+  --checked: #4caf50;
+  --btn-bg: #fff;
+  --btn-text: #000;
+  --input-bg: #2a2d3b;
+  --color-light-gray: #21262d;
+  --color-secondary: #1a1a1a;
+  --color-text: #fff;
+  --color-border: #30363d;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+.app {
+  /* max-width: 800px; */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--color-border);
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+.header__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.header p {
+  color: var(--color-medium-gray);
+  font-size: 1.1rem;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.header__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+.add-habit-section {
+  background: var(--color-light-gray);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-xl);
+  transition: background-color 0.3s ease;
+}
+
+.habit-form {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.habit-form input {
+  flex: 1;
+  min-width: 250px;
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--color-secondary);
+  color: var(--color-text);
+  transition: all 0.3s ease;
+}
+.habit-form button {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--btn-bg);
+  color: var(--color-secondary);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.habit-filters {
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+.filter-btn.active {
+  background: var(--btn-bg);
+  color: var(--color-secondary);
+  /*border-color: var(--color-primary);*/
+}
+.habit-list {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+.habit-card {
+  background: var(--color-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.habit-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+.habit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+.habit-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.habit-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+.habit-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 0.6rem;
+  padding-bottom: 1.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-width: 60px;
+  min-height: 70px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-secondary);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/*.habit-day.checked {
+  background-color: var(--card-bg);
+  border: 1.5px solid var(--checked);
+  color: var(--text-color);
+}*/
+
+.habit-day.checked::after {
+  content: "✔"; /* ✔ */
+  position: absolute;
+  bottom: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid var(--checked);
+  background-color: var(--checked);
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.habit-day:not(.checked)::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid var(--color-border);
+  background-color: transparent;
+  z-index: 1;
+}
+
+.habit-day.today {
+  font-weight: bold;
+  border: 2px solid var(--color-border);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--color-danger);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin: 11px;
+}
+
+.delete-btn:hover {
+  background: var(--color-danger);
+  color: var(--color-secondary);
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing-sm);
+}
+.day-item {
+  text-align: center;
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+.day-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-medium-gray);
+}
+.day-chechbox {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+
+body.dark .delete-btn {
+  background-image: url("delete-light.png");
+}
+@media (max-width: 500px) {
+  .habit-days {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

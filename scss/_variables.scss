@@ -1,0 +1,51 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --card-bg: #fff;
+  --accent: #000;
+  --checked: #4caf50;
+  --btn-bg: #000;
+  --btn-text: #fff;
+  --input-bg: #fff;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+  --border-radius: 8px;
+
+  --color-border: #ddd;
+  --color-primary: #4a90e2;
+  --color-secondary: #fff;
+  --color-light-gray: #f6f7f9;
+  --color-medium-gray: #999;
+  --color-text: var(--text-color);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  --bg-color: #0f1117;
+  --text-color: #f0f0f0;
+  --card-bg: #1c1e26;
+  --accent: #fff;
+  --checked: #4caf50;
+  --btn-bg: #fff;
+  --btn-text: #000;
+  --input-bg: #2a2d3b;
+  --color-light-gray: #21262d;
+  --color-secondary: #1a1a1a;
+  --color-text: #fff;
+  --color-border: #30363d;
+}
+.app {
+  /* max-width: 800px; */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div>
+          <h1 class="header__title">Habit Tracker</h1>
+          <p>Track and build positive daily habits</p>
+        </div>
+        <button
+          id="theme-toggle"
+          class="header__toggle"
+          aria-label="Toggle Theme"
+        >
+          <img
+            id="theme-icon"
+            src="https://img.icons8.com/ios-glyphs/30/moon-symbol.png"
+            alt="Toggle theme"
+            width="24"
+            height="24"
+          />
+        </button>
+      </header>
+
+      <section class="add-habit-section">
+        <form class="habit-form">
+          <input
+            id="habit-input"
+            type="text"
+            placeholder="Enter new habit name..."
+          />
+          <button id="habit-add">Add Habit</button>
+        </form>
+      </section>
+
+      <section class="habit-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="complete">
+          Completed Today
+        </button>
+        <button class="filter-btn" data-filter="incomplete">
+          Not Completed Today
+        </button>
+      </section>
+
+      <section id="habit-list" class="habit-list">
+        <p
+          id="empty-message"
+          style="text-align: center; color: gray; margin-top: 2rem"
+        >
+          No habits yet<br /><small
+            >Add your first habit to start your journey!</small
+          >
+        </p>
+      </section>
+    </div>
+    <script src="tracker-app.js"></script>
+  </body>
+</html>
