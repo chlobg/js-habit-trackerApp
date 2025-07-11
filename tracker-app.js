@@ -44,7 +44,11 @@ function render() {
       el.className = "habit-day";
       if (habit.days[i]) el.classList.add("checked");
       if (i === todayIdx) el.classList.add("today");
-      el.textContent = day;
+      const label = document.createElement("span");
+      label.className = "day-label";
+      label.textContent = day;
+      el.appendChild(label);
+
       el.onclick = () => {
         habit.days[i] = !habit.days[i];
         save();

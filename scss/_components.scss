@@ -96,3 +96,11 @@
   color: var(--color-secondary);
   /*border-color: var(--color-primary);*/
 }
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-medium-gray);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Habit Tracker</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="app">
@@ -49,15 +49,25 @@
         </button>
       </section>
 
-      <section id="habit-list" class="habit-list">
+      <section class="habit-list-container">
         <p
           id="empty-message"
           style="text-align: center; color: gray; margin-top: 2rem"
         >
-          No habits yet<br /><small
-            >Add your first habit to start your journey!</small
+          <span
+            style="
+              display: block;
+              margin-bottom: var(--spacing-md);
+              font-size: 1.3rem;
+              font-weight: bold;
+            "
           >
+            No habits yet
+          </span>
+          <small>Add your first habit to start your journey!</small>
         </p>
+
+        <div id="habit-list" class="habit-list"></div>
       </section>
     </div>
     <script src="tracker-app.js"></script>

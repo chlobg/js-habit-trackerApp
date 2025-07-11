@@ -1,5 +1,6 @@
+@charset "UTF-8";
 :root {
-  --bg-color: #f9f9f9;
+  --bg-color: #ffffff;
   --text-color: #222;
   --card-bg: #fff;
   --accent: #000;
@@ -7,19 +8,24 @@
   --btn-bg: #000;
   --btn-text: #fff;
   --input-bg: #fff;
-
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2.5rem;
   --border-radius: 8px;
-
   --color-border: #ddd;
   --color-primary: #4a90e2;
   --color-secondary: #fff;
-  --color-light-gray: #f6f7f9;
+  --color-light-gray: #f8f9fa;
   --color-medium-gray: #999;
   --color-text: var(--text-color);
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
 }
 
 body.dark {
@@ -36,18 +42,13 @@ body.dark {
   --color-text: #fff;
   --color-border: #30363d;
 }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background 0.3s, color 0.3s;
-}
+
 .app {
   /* max-width: 800px; */
   margin: 0 auto;
   padding: 2rem 1rem;
 }
+
 .header {
   text-align: center;
   margin-bottom: var(--spacing-xl);
@@ -56,6 +57,7 @@ body {
   position: relative;
   font-family: Arial, sans-serif;
 }
+
 .header__title {
   font-size: 2.5rem;
   font-weight: 600;
@@ -71,6 +73,7 @@ body {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
+
 .header__toggle {
   position: absolute;
   top: 0;
@@ -99,6 +102,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .habit-form input {
   flex: 1;
   min-width: 250px;
@@ -111,6 +115,7 @@ body {
   color: var(--color-text);
   transition: all 0.3s ease;
 }
+
 .habit-form button {
   padding: var(--spacing-md) var(--spacing-lg);
   background: var(--btn-bg);
@@ -122,6 +127,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .habit-filters {
   margin-bottom: var(--spacing-lg);
   display: flex;
@@ -129,6 +135,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .filter-btn {
   padding: var(--spacing-sm) var(--spacing-md);
   background: var(--color-secondary);
@@ -139,15 +146,25 @@ body {
   font-size: 0.9rem;
   color: var(--color-text);
 }
+
 .filter-btn.active {
   background: var(--btn-bg);
   color: var(--color-secondary);
   /*border-color: var(--color-primary);*/
 }
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-medium-gray);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
 .habit-list {
   display: grid;
   gap: var(--spacing-lg);
 }
+
 .habit-card {
   background: var(--color-secondary);
   border: 2px solid var(--color-border);
@@ -156,6 +173,7 @@ body {
   transition: all 0.3s ease;
   position: relative;
 }
+
 .habit-title {
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -164,21 +182,25 @@ body {
   align-items: center;
   margin-bottom: var(--spacing-lg);
 }
+
 .habit-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: var(--spacing-lg);
 }
+
 .habit-name {
   font-size: 1.2rem;
   font-weight: 500;
 }
+
 .habit-days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
 }
+
 .habit-day {
   display: flex;
   flex-direction: column;
@@ -202,7 +224,6 @@ body {
   border: 1.5px solid var(--checked);
   color: var(--text-color);
 }*/
-
 .habit-day.checked::after {
   content: "✔"; /* ✔ */
   position: absolute;
@@ -262,6 +283,7 @@ body {
   grid-template-columns: repeat(7, 1fr);
   gap: var(--spacing-sm);
 }
+
 .day-item {
   text-align: center;
   padding: var(--spacing-md);
@@ -271,12 +293,14 @@ body {
   transition: all 0.3s ease;
   user-select: none;
 }
+
 .day-label {
   font-size: 0.8rem;
   font-weight: 500;
   margin-bottom: var(--spacing-xs);
   color: var(--color-medium-gray);
 }
+
 .day-chechbox {
   background: var(--color-success);
   border-color: var(--color-success);
@@ -285,8 +309,11 @@ body {
 body.dark .delete-btn {
   background-image: url("delete-light.png");
 }
+
 @media (max-width: 500px) {
   .habit-days {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/*# sourceMappingURL=main.css.map */
