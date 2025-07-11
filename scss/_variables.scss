@@ -43,9 +43,10 @@ body.dark {
   --color-secondary: #1a1a1a;
   --color-text: #fff;
   --color-border: #30363d;
+  --color-medium-gray: #8b949e;
 }
 .app {
-  /* max-width: 800px; */
+  max-width: 1200px !important;
   margin: 0 auto;
   padding: 2rem 1rem;
 }

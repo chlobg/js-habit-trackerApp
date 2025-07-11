@@ -11,6 +11,9 @@
   padding: var(--spacing-lg);
   transition: all 0.3s ease;
   position: relative;
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
 }
 .habit-title {
   font-weight: bold;
@@ -51,6 +54,11 @@
   background-color: var(--color-secondary);
   position: relative;
   box-sizing: border-box;
+  transition: all 0.3s ease;
+  &:hover {
+    border-color: var(--color-text);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
 }
 
 /*.habit-day.checked {
@@ -88,10 +96,15 @@
   z-index: 1;
 }
 
-.habit-day.today {
+.no-match-message,
+.no-habit-message {
+  color: --color-medium-gray;
+}
+
+/*.habit-day.today {
   font-weight: bold;
   border: 2px solid var(--color-border);
-}
+}*/
 
 .delete-btn {
   background: none;

@@ -41,10 +41,11 @@ body.dark {
   --color-secondary: #1a1a1a;
   --color-text: #fff;
   --color-border: #30363d;
+  --color-medium-gray: #8b949e;
 }
 
 .app {
-  /* max-width: 800px; */
+  max-width: 1200px !important;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -173,6 +174,9 @@ body.dark {
   transition: all 0.3s ease;
   position: relative;
 }
+.habit-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 .habit-title {
   font-weight: bold;
@@ -217,6 +221,11 @@ body.dark {
   background-color: var(--color-secondary);
   position: relative;
   box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.habit-day:hover {
+  border-color: var(--color-text);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 /*.habit-day.checked {
@@ -253,11 +262,15 @@ body.dark {
   z-index: 1;
 }
 
-.habit-day.today {
-  font-weight: bold;
-  border: 2px solid var(--color-border);
+.no-match-message,
+.no-habit-message {
+  color: --color-medium-gray;
 }
 
+/*.habit-day.today {
+  font-weight: bold;
+  border: 2px solid var(--color-border);
+}*/
 .delete-btn {
   background: none;
   border: none;
