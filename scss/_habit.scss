@@ -122,9 +122,14 @@
 }
 
 .delete-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+/*.delete-btn:hover {
   background: var(--color-danger);
   color: var(--color-secondary);
-}
+}*/
 
 .days-grid {
   display: grid;

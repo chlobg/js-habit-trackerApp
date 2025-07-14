@@ -11,7 +11,7 @@ let habits = JSON.parse(localStorage.getItem("habits")) || [];
 let filter = "all";
 
 const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-const todayIdx = (new Date().getDay() + 6) % 7; // Lundi = 0
+const todayIdx = (new Date().getDay() + 6) % 7; // Monday = 0
 
 function save() {
   localStorage.setItem("habits", JSON.stringify(habits));
@@ -29,7 +29,6 @@ function render() {
     return true;
   });
 
-  // Cas : Aucune habitude enregistrée
   if (habits.length === 0) {
     if (filter === "all") {
       noHabitMessage.style.display = "block";
@@ -39,13 +38,11 @@ function render() {
     return;
   }
 
-  // Cas : Habitudes existent mais aucune ne matche le filtre
   if (visible.length === 0) {
     noMatchMessage.style.display = "block";
     return;
   }
 
-  // Sinon : afficher les habitudes visibles
   visible.forEach((habit) => {
     const card = document.createElement("div");
     card.className = "habit-card";
@@ -86,6 +83,7 @@ function render() {
         habits = habits.filter((h) => h.id !== habit.id);
         save();
         render();
+        alert("Item has been successfully removed");
       }
     };
 

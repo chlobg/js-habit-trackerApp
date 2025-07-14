@@ -287,10 +287,14 @@ body.dark {
 }
 
 .delete-btn:hover {
-  background: var(--color-danger);
-  color: var(--color-secondary);
+  background-color: red;
+  color: white;
 }
 
+/*.delete-btn:hover {
+  background: var(--color-danger);
+  color: var(--color-secondary);
+}*/
 .days-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
